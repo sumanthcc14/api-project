@@ -1,0 +1,44 @@
+Voting App Architecture and Design
+
+ Overview
+
+The Voting App is a Java Spring Boot application designed to facilitate a basic voting system through RESTful APIs. The architecture follows a straightforward structure with in-memory storage for candidate data.
+
+ Components
+
+1. Controller (VotingApp.java):
+   - Exposes RESTful APIs for candidate entry, vote casting, counting, listing, and winner determination.
+   - Handles incoming HTTP requests, validates inputs, and interacts with the service layer.
+
+2. Service Layer:
+   - Manages the business logic and operations for candidate and vote management.
+   - Handles candidate entry, vote casting, counting, listing, and winner determination.
+
+3. In-Memory Storage (HashMap):
+   - Stores candidate data (name and vote count) temporarily during the application runtime.
+   - Provides a simple and lightweight solution for demonstration purposes.
+
+4. Testing (VotingAppTest.java):
+   - Unit tests implemented using JUnit and Mockito to ensure the functionality of API endpoints.
+
+Usage
+
+- Candidate Entry:
+  - /entercandidate?name={candidateName}: Adds a candidate with an initialized vote count of 0.
+
+- Vote Casting:
+  - /castvote?name={candidateName}: Casts a vote for a valid candidate, incrementing their vote count.
+
+- Vote Counting:
+  - /countvote?name={candidateName}: Retrieves and displays the latest vote count for a candidate.
+
+- Listing Votes:
+  - /listvote: Returns all candidates and their vote counts in JSON format.
+
+- Determining Winner:
+  - /getwinner: Displays the name of the candidate with the highest number of votes.
+
+ Notes
+
+- The application utilizes in-memory storage for simplicity; a real-world scenario would involve a persistent database.
+- Port numbers and configurations can be adjusted as needed.
