@@ -38,7 +38,5 @@ Usage
 - Determining Winner:
   - /getwinner: Displays the name of the candidate with the highest number of votes.
 
- Notes
-
-- The application utilizes in-memory storage for simplicity; a real-world scenario would involve a persistent database.
+ Note
 - Port numbers and configurations can be adjusted as needed.
