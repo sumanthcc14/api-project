@@ -23,5 +23,4 @@
 4. Unit Testing:
    - Unit tests implemented using JUnit and Mockito for API endpoints.
 
-just a note
-- Ensure to adjust port numbers or other configurations as needed.
+
